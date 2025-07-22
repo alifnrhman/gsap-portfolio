@@ -34,3 +34,12 @@ body {
 .tippy-tooltip {
 	@apply bg-black/50 text-white text-sm font-medium rounded-lg px-2 py-1 shadow-lg border border-white/20;
 }
+
+.mask-fade-all {
+	-webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+	mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+}

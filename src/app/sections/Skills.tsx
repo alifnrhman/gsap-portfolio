@@ -19,8 +19,8 @@ export default function Skills() {
 			scrollTrigger: {
 				trigger: ".skills-section",
 				start: "top top",
-				end: "bottom center",
-				scrub: 2,
+				end: "+=200%",
+				scrub: true,
 				pin: true,
 			},
 		});
@@ -56,17 +56,17 @@ export default function Skills() {
 
 	tippy.setDefaultProps({
 		animation: "shift-away",
-		followCursor: true,
 		plugins: [followCursor],
+		followCursor: true,
 	});
 
 	return (
 		<section className="skills-section h-screen w-screen flex justify-center text-white select-none">
 			<div className="noisy" />
 			<img
-				src="/images/skills-bg.png"
+				src="/images/skills-section-background.png"
 				alt="Background"
-				className="absolute w-full h-full object-cover object-bottom z-2"
+				className="absolute w-full h-full object-cover object-bottom z-2 opacity-100"
 			/>
 
 			<div className="h-screen w-screen py-30 px-40 flex justify-between">
@@ -75,7 +75,7 @@ export default function Skills() {
 						<div className="tech">
 							<p className="text-xl sm:text-2xl font-bold text-white/90">Languages</p>
 							<p className="text-sm 2xl:text-base italic font-light text-white/80">The dialects I speak in the wilderness of code.</p>
-							<hr className="my-2 h-0.5 w-6/12 opacity-100 border-0 rounded-r-lg bg-white/80" />
+							<hr className="my-2 h-0.5 w-6/12 opacity-100 border-0 rounded-r-lg bg-white/70" />
 
 							<div className="mt-5 opacity-70 flex flex-wrap gap-5">
 								{skills.languages.map(({ name, Icon }) => (
@@ -83,7 +83,7 @@ export default function Skills() {
 										content={name}
 										className="tippy-tooltip"
 										key={name}>
-										<div className="skill w-fit h-fit p-1.5 bg-white/20 backdrop-blur-3xl border border-white/20 rounded-lg flex items-center justify-center">
+										<div className="skill w-fit h-fit p-1.5 bg-white/10 backdrop-blur-3xl border border-white/20 rounded-lg flex items-center justify-center">
 											<Icon />
 										</div>
 									</Tippy>
@@ -102,7 +102,7 @@ export default function Skills() {
 										content={name}
 										className="tippy-tooltip"
 										key={name}>
-										<div className="skill w-fit h-fit p-1.5 bg-white/20 backdrop-blur-3xl border border-white/20 rounded-lg flex items-center justify-center">
+										<div className="skill w-fit h-fit p-1.5 bg-white/10 backdrop-blur-3xl border border-white/20 rounded-lg flex items-center justify-center">
 											<Icon />
 										</div>
 									</Tippy>
@@ -121,7 +121,7 @@ export default function Skills() {
 										content={name}
 										className="tippy-tooltip"
 										key={name}>
-										<div className="skill w-fit h-fit p-1.5 bg-white/20 backdrop-blur-3xl border border-white/20 rounded-lg flex items-center justify-center">
+										<div className="skill w-fit h-fit p-1.5 bg-white/10 backdrop-blur-3xl border border-white/20 rounded-lg flex items-center justify-center">
 											<Icon />
 										</div>
 									</Tippy>
@@ -140,7 +140,7 @@ export default function Skills() {
 										content={name}
 										className="tippy-tooltip"
 										key={name}>
-										<div className="skill w-fit h-fit p-1.5 bg-white/20 backdrop-blur-3xl border border-white/20 rounded-lg flex items-center justify-center">
+										<div className="skill w-fit h-fit p-1.5 bg-white/10 backdrop-blur-3xl border border-white/20 rounded-lg flex items-center justify-center">
 											<Icon />
 										</div>
 									</Tippy>

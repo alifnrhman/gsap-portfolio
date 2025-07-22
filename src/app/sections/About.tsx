@@ -18,8 +18,8 @@ export default function About() {
 			scrollTrigger: {
 				trigger: ".about-section",
 				start: "top top",
-				end: "bottom center",
-				scrub: 2,
+				end: "+=200%",
+				scrub: true,
 				pin: true,
 			},
 		});
@@ -88,6 +88,7 @@ export default function About() {
 				height={1080}
 				className="absolute foreground w-full h-full object-cover object-[0%_90%] opacity-100 z-4"
 			/>
+
 			<div className="h-screen w-screen py-10 sm:py-20 2xl:py-30 px-10 sm:px-20 2xl:px-40 flex flex-col sm:flex-row justify-between">
 				<div className="w-full h-full flex flex-col justify-between">
 					<div className="text-base sm:text-xl 2xl:text-2xl w-full sm:w-full 2xl:w-10/12 text-justify text-pretty space-y-2 sm:space-y-5 z-3">
