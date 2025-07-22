@@ -30,3 +30,7 @@ body {
 .noisy {
 	@apply bg-[url("/images/noise.png")] w-full h-full absolute bg-blend-multiply bg-no-repeat bg-cover opacity-30 z-5;
 }
+
+.tippy-tooltip {
+	@apply bg-black/50 text-white text-sm font-medium rounded-lg px-2 py-1 shadow-lg border border-white/20;
+}
