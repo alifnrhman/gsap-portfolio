@@ -111,7 +111,7 @@ export default function Projects() {
 								<img
 									src={`/images/projects/` + projects[projectIndex].images[projectImageIndex]}
 									alt="Project Image"
-									className="opacity-60 w-full h-full object-cover object-top"
+									className="opacity-80 w-full h-full object-cover object-top"
 									loading="eager"
 								/>
 
