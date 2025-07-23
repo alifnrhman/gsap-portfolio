@@ -87,7 +87,7 @@ export default function Projects() {
 		<section className="projects-section h-screen w-screen flex justify-center text-white select-none">
 			<div className="noisy" />
 			<img
-				src="/images/projects-section-background.png"
+				src="/images/projects-section-background.webp"
 				alt="Background"
 				className="absolute w-full h-full object-cover object-top z-2 opacity-80"
 			/>

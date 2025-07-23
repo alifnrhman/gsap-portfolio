@@ -64,7 +64,7 @@ export default function Skills() {
 		<section className="skills-section h-screen w-screen flex justify-center text-white select-none">
 			<div className="noisy" />
 			<img
-				src="/images/skills-section-background.png"
+				src="/images/skills-section-background.webp"
 				alt="Background"
 				className="absolute w-full h-full object-cover object-bottom z-2 opacity-100"
 			/>

@@ -6,6 +6,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import "tippy.js/animations/shift-away.css";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+import toast from "react-hot-toast";
 
 export default function Contact() {
 	gsap.registerPlugin(SplitText, ScrollTrigger);
@@ -61,6 +64,48 @@ export default function Contact() {
 			});
 	}, []);
 
+	const form = useRef<HTMLFormElement>(null);
+	const [loading, setLoading] = useState(false);
+
+	const sendMessage = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		setLoading(true);
+
+		if (form.current) {
+			emailjs
+				.sendForm("service_nndxptq", "template_7rl5o5q", form.current, {
+					publicKey: "8N_WA7dv6Am-3JuIe",
+				})
+				.then(
+					() => {
+						toast("The fire has received your words.", {
+							icon: "🔥",
+							style: {
+								borderRadius: "4px",
+								background: "#333",
+								color: "#fff",
+							},
+						});
+						form.current?.reset();
+					},
+					(error) => {
+						toast("The wind stole your message. Please resend.", {
+							icon: "❌",
+							style: {
+								borderRadius: "4px",
+								background: "#333",
+								color: "#fff",
+							},
+						});
+					}
+				);
+		} else {
+			console.log("Form reference is null.");
+		}
+
+		setLoading(false);
+	};
+
 	return (
 		<section className="contact-section h-screen w-screen flex justify-center text-white select-none">
 			<div className="noisy" />
@@ -74,13 +119,18 @@ export default function Contact() {
 
 			<div className="h-screen w-screen py-30 px-40 flex justify-between">
 				<div className="w-full h-full flex flex-col justify-between">
-					<form className="flex flex-col gap-4 z-6 text-lg mx-auto w-1/3 mt-10">
+					<form
+						className="flex flex-col gap-4 z-6 text-lg mx-auto w-1/3 mt-10"
+						ref={form}
+						onSubmit={sendMessage}>
 						<label htmlFor="name">
 							<div className="text-white/80 font-medium">Name</div>
 							<input
 								type="text"
 								name="name"
 								id="name"
+								required
+								placeholder="Your name"
 								className="mt-2 px-3 py-1.5 bg-white/10 backdrop-blur-xs border border-white/20 rounded-xl w-full text-white/70 outline-none focus:ring focus:ring-white/30 transition-all duration-300"
 							/>
 						</label>
@@ -91,6 +141,8 @@ export default function Contact() {
 								type="email"
 								name="email"
 								id="email"
+								required
+								placeholder="Your email"
 								className="mt-2 px-3 py-1.5 bg-white/10 backdrop-blur-xs border border-white/20 rounded-xl w-full text-white/70 outline-none focus:ring focus:ring-white/30 transition-all duration-300"
 							/>
 						</label>
@@ -100,6 +152,8 @@ export default function Contact() {
 							<textarea
 								name="message"
 								id="message"
+								required
+								placeholder="Your message"
 								rows={3}
 								className="mt-2 px-3 py-1.5 bg-white/10 backdrop-blur-xs border border-white/20 rounded-xl w-full text-white/70 outline-none focus:ring focus:ring-white/30 transition-all duration-300"></textarea>
 						</label>

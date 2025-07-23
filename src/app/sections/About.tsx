@@ -4,7 +4,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import Image from "next/image";
 
 export default function About() {
 	gsap.registerPlugin(SplitText, ScrollTrigger);
@@ -73,29 +72,44 @@ export default function About() {
 	return (
 		<section className="about-section h-screen w-screen flex justify-center bg-gradient-to-t from-[#0b1b34] to-[#2f3f54] text-white select-none">
 			<div className="noisy" />
-			<Image
+			<img
 				src="/images/about-bg.webp"
 				alt="Background"
-				width={1920}
-				height={1080}
 				className="absolute w-full h-full object-cover object-[0%_90%] opacity-50 z-2"
 			/>
 
-			<Image
-				src="/images/about-foreground.png"
+			<img
+				src="/images/about-foreground.webp"
 				alt="Background"
-				width={1920}
-				height={1080}
 				className="absolute foreground w-full h-full object-cover object-[0%_90%] opacity-100 z-4"
 			/>
 
 			<div className="h-screen w-screen py-10 sm:py-20 2xl:py-30 px-10 sm:px-20 2xl:px-40 flex flex-col sm:flex-row justify-between">
 				<div className="w-full h-full flex flex-col justify-between">
-					<div className="text-base sm:text-xl 2xl:text-2xl w-full sm:w-full 2xl:w-10/12 text-justify text-pretty space-y-2 sm:space-y-5 z-3">
+					<div className="text-base sm:text-xl 2xl:text-2xl text-white/90 w-full sm:w-full 2xl:w-10/12 text-justify text-pretty space-y-2 sm:space-y-4 z-5">
 						<p className="paragraph">Indonesian software engineer & tech explorer.</p>
 						<p className="paragraph">Thrives in the quiet of the night, weaving thoughts into lines of code.</p>
 						<p className="paragraph">Fueled by auroras, caffeine, and curiosity.</p>
 						<p className="paragraph">Still learning, still dreaming — on a journey through the unknown.</p>
+						<p className="paragraph">
+							You can trace the path so far through{" "}
+							<a
+								href="https://github.com/alifnrhman"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-white/80 hover:text-white/100 transition-colors duration-300 underline underline-offset-5">
+								GitHub
+							</a>{" "}
+							or{" "}
+							<a
+								href="https://www.linkedin.com/in/alifnurahman/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-white/80 hover:text-white/100 transition-colors duration-300 underline underline-offset-5">
+								LinkedIn
+							</a>
+							.
+						</p>
 					</div>
 
 					<div className="z-3 mb-20 hidden sm:block">
@@ -107,19 +121,19 @@ export default function About() {
 
 				<div className="grid grid-cols-2 grid-rows-2 gap-x-4 text-center text-white/80 mb-10 sm:mb-50 z-3 w-full sm:w-5/12 2xl:w-4/12">
 					<div className="stats">
-						<p className="text-3xl sm:text-4xl font-bold text-white">1+</p>
+						<p className="text-3xl sm:text-4xl font-bold text-white/90">1+</p>
 						<p className="text-sm sm:text-base/1 2xl:text-lg mt-4">Years of Experience</p>
 					</div>
 					<div className="stats">
-						<p className="text-3xl sm:text-4xl font-bold text-white">10+</p>
+						<p className="text-3xl sm:text-4xl font-bold text-white/90">10+</p>
 						<p className="text-sm sm:text-base/1 2xl:text-lg mt-4">Projects Built</p>
 					</div>
 					<div className="stats">
-						<p className="text-3xl sm:text-4xl font-bold text-white">4+</p>
+						<p className="text-3xl sm:text-4xl font-bold text-white/90">4+</p>
 						<p className="text-sm sm:text-base/1 2xl:text-lg mt-2">Production Deployments</p>
 					</div>
 					<div className="stats">
-						<p className="text-3xl sm:text-4xl font-bold text-white">∞</p>
+						<p className="text-3xl sm:text-4xl font-bold text-white/90">∞</p>
 						<p className="text-sm sm:text-base/1 2xl:text-lg mt-2">Cups of Coffee Consumed</p>
 					</div>
 				</div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "../globals.css";
 import ScrollProvider from "@/components/ScrollProvider";
+import { Toaster } from "react-hot-toast";
 
 const raleway = Raleway({
 	subsets: ["latin"],
@@ -21,6 +22,10 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={`${raleway.className} antialiased overflow-x-hidden`}>
 				<ScrollProvider />
+				<Toaster
+					position="top-center"
+					reverseOrder={false}
+				/>
 				{children}
 			</body>
 		</html>
