@@ -87,6 +87,7 @@ export default function Contact() {
 							},
 						});
 						form.current?.reset();
+						setLoading(false);
 					},
 					(error) => {
 						toast("The wind stole your message. Please resend.", {
@@ -97,13 +98,12 @@ export default function Contact() {
 								color: "#fff",
 							},
 						});
+						setLoading(false);
 					}
 				);
 		} else {
 			console.log("Form reference is null.");
 		}
-
-		setLoading(false);
 	};
 
 	return (
@@ -160,8 +160,8 @@ export default function Contact() {
 						</label>
 
 						<button
-							className={`px-6 py-3 text-sm md:text-base font-medium text-white/50 hover:text-white/80 italic bg-white/10 backdrop-blur-md border border-white/20 rounded-xl transition-all duration-300 hover:bg-white/20 hover:shadow-md ${
-								loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+							className={`px-6 py-3 text-sm md:text-base font-medium text-white/50 italic bg-white/10 backdrop-blur-md border border-white/20 rounded-xl transition-all duration-300 hover:shadow-md ${
+								loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer hover:bg-white/20 hover:text-white/80"
 							}`}
 							disabled={loading}>
 							Whisper into the fire
