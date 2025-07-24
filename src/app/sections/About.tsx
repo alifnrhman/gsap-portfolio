@@ -84,11 +84,13 @@ export default function About() {
 				src="/images/aboutme-bg.webp"
 				alt="Background"
 				className="absolute inset-0 h-screen w-full object-cover object-top-left md:object-top pointer-events-none select-none opacity-70 z-2"
+				loading="eager"
 			/>
 
 			<img
 				src="/images/aboutme-fg.webp"
 				alt="Background"
+				loading="eager"
 				className="foreground absolute inset-0 h-screen w-full object-cover object-[20%_100%] md:object-bottom pointer-events-none select-none opacity-100 z-3"
 			/>
 

@@ -64,11 +64,13 @@ export default function Hero() {
 				src="/images/hero-bg.webp"
 				className="sky absolute inset-0 h-screen w-full object-cover object-top pointer-events-none select-none opacity-80"
 				alt="Background"
+				loading="eager"
 			/>
 			<img
 				src="/images/hero-fg.webp"
 				className="mountain absolute inset-0 h-screen w-full object-cover object-top pointer-events-none select-none z-2"
 				alt="Background"
+				loading="eager"
 			/>
 
 			<DotLottieReact

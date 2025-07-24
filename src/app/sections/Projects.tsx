@@ -98,6 +98,7 @@ export default function Projects() {
 				src="/images/projects-bg.webp"
 				alt="Background"
 				className="absolute inset-0 h-screen w-full object-cover object-[30%_100%] pointer-events-none select-none"
+				loading="eager"
 			/>
 			<div className="absolute bottom-0 left-0 w-full h-[100px] bg-gradient-to-t from-black to-transparent pointer-events-none z-3" />
 

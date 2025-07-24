@@ -3,6 +3,7 @@ import { Raleway } from "next/font/google";
 import "../globals.css";
 import ScrollProvider from "@/components/ScrollProvider";
 import { Toaster } from "react-hot-toast";
+import LoadingScreen from "../LoadingScreen";
 
 const raleway = Raleway({
 	subsets: ["latin"],
@@ -21,12 +22,14 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${raleway.className} antialiased overflow-x-hidden`}>
-				<ScrollProvider />
-				<Toaster
-					position="top-center"
-					reverseOrder={false}
-				/>
-				{children}
+				<LoadingScreen>
+					<ScrollProvider />
+					<Toaster
+						position="top-center"
+						reverseOrder={false}
+					/>
+					{children}
+				</LoadingScreen>
 			</body>
 		</html>
 	);

@@ -87,6 +87,7 @@ export default function Skills() {
 				src="/images/skills-bg.webp"
 				alt="Background"
 				className="absolute inset-0 h-screen w-full object-cover object-top pointer-events-none select-none"
+				loading="eager"
 			/>
 
 			<div className="container-padding relative h-screen w-screen flex justify-between">
