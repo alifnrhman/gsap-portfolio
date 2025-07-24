@@ -121,7 +121,7 @@ export default function About() {
 					</div>
 
 					<div className="z-3 mt-auto hidden xl:block">
-						<h1 className="title-about font-extrabold text-4xl sm:text-6xl 2xl:text-7xl text-white/80">The Explorer’s Origin</h1>
+						<h1 className="title-about font-extrabold text-4xl sm:text-6xl 2xl:text-7xl text-white/80">The Explorer&apos;s Origin</h1>
 						<hr className="title-about-underline my-2 h-1 w-0 opacity-0 border-0 rounded-r-lg bg-white/80" />
 						<p className="title-about text-xl font-light italic">A quiet mind, a curious soul, and a trail of code behind.</p>
 					</div>
@@ -148,7 +148,7 @@ export default function About() {
 
 				<div className="z-3 mt-auto block xl:hidden">
 					<h1 className="title-about font-extrabold text-3xl sm:text-6xl 2xl:text-7xl text-white/80">
-						The <br className="block sm:hidden" /> Explorer’s Origin
+						The <br className="block sm:hidden" /> Explorer&apos;s Origin
 					</h1>
 					<hr className="title-about-underline my-2 h-1 w-0 opacity-0 border-0 rounded-e-lg bg-white/80" />
 					<p className="title-about w-full text-sm sm:text-xl font-light italic break-words whitespace-normal">A quiet mind, a curious soul, and a trail of code behind.</p>

@@ -88,7 +88,7 @@ export default function Hero() {
 			<div className="absolute inset-0 px-3 sm:px-5 md:px-10 lg:px-20 text-center flex flex-col justify-center items-center z-10 name-container opacity-0 bg-gradient-to-b from-[#040711] via-[#0b1b34] to-[#2f3f54]">
 				<div className="noisy" />
 				<p className="px-6 text-2xl sm:text-[5rem]/25 lg:text-[5rem]/30 font-extrabold opacity-90 -z-1 whitespace-nowrap">
-					Hi, <br className="xl:hidden" /> I'm Alif Nurahman
+					Hi, <br className="xl:hidden" /> I&apos;m Alif Nurahman
 				</p>
 				<p className="px-6 text-lg sm:text-[1.5rem] lg:text-[2rem] font-light opacity-90 text-center -z-1">— a software engineer, crafting magical experiences with auroras and caffeine.</p>
 			</div>
