@@ -4,6 +4,8 @@ import "../globals.css";
 import ScrollProvider from "@/components/ScrollProvider";
 import { Toaster } from "react-hot-toast";
 import LoadingScreen from "../LoadingScreen";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const raleway = Raleway({
 	subsets: ["latin"],
@@ -23,6 +25,8 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={`${raleway.className} antialiased overflow-x-hidden`}>
 				<LoadingScreen>
+					<Analytics />
+					<SpeedInsights />
 					<ScrollProvider />
 					<Toaster
 						position="top-center"
