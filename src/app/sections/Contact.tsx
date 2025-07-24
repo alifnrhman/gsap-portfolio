@@ -111,7 +111,7 @@ export default function Contact() {
 			<div className="noisy" />
 			<video
 				src="/videos/campfire.mp4"
-				className="absolute inset-0 h-screen w-full object-cover object-[35%_100%] pointer-events-none select-none z-2 opacity-80"
+				className="absolute inset-0 h-screen w-full object-cover object-[35%_100%] pointer-events-none select-none z-2 opacity-100"
 				autoPlay
 				loop
 				muted
