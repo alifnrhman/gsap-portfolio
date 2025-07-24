@@ -159,7 +159,11 @@ export default function Contact() {
 								className="mt-2 px-4 py-2 bg-white/10 backdrop-blur-xs border border-white/20 rounded-xl w-full text-white/70 outline-none focus:ring focus:ring-white/30 transition-all duration-300"></textarea>
 						</label>
 
-						<button className="px-6 py-3 text-sm md:text-base font-medium text-white/50 hover:text-white/80 italic bg-white/10 backdrop-blur-md border border-white/20 rounded-xl transition-all duration-300 hover:bg-white/20 hover:shadow-md cursor-pointer">
+						<button
+							className={`px-6 py-3 text-sm md:text-base font-medium text-white/50 hover:text-white/80 italic bg-white/10 backdrop-blur-md border border-white/20 rounded-xl transition-all duration-300 hover:bg-white/20 hover:shadow-md ${
+								loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+							}`}
+							disabled={loading}>
 							Whisper into the fire
 						</button>
 					</form>
