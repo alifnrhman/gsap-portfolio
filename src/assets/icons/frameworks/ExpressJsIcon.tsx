@@ -1,9 +1,9 @@
-export default function ExpressJsIcon() {
+export default function ExpressJsIcon({ size = 40 }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			width="40"
-			height="40"
+			width={size}
+			height={size}
 			fillRule="evenodd"
 			clipRule="evenodd"
 			imageRendering="optimizeQuality"

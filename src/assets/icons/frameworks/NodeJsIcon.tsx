@@ -1,9 +1,9 @@
-export default function NodeJsIcon() {
+export default function NodeJsIcon({ size = 40 }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			width="40"
-			height="40"
+			width={size}
+			height={size}
 			preserveAspectRatio="xMidYMid"
 			viewBox="-16.5 0 289 289">
 			<path

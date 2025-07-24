@@ -1,9 +1,9 @@
-export default function GSAPIcon() {
+export default function GSAPIcon({ size = 40 }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			height="40"
-			width="40"
+			height={size}
+			width={size}
 			fill="none"
 			viewBox="0 0 82 30">
 			<path

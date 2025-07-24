@@ -15,7 +15,7 @@ import TailwindCSSIcon from "@/assets/icons/tools/TailwindCSSIcon";
 
 type Skill = {
 	name: string;
-	Icon: React.FC<React.SVGProps<SVGSVGElement>>;
+	Icon: React.ComponentType<any>;
 };
 
 export const skills: Record<string, Skill[]> = {

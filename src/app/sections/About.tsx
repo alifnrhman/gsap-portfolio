@@ -66,27 +66,35 @@ export default function About() {
 				ease: "expo.out",
 				stagger: 0.4,
 				delay: 1,
-			});
+			})
+			.to(
+				statsSplit.lines,
+				{
+					opacity: 1,
+					duration: 2,
+				},
+				"+=5"
+			);
 	}, []);
 
 	return (
 		<section className="about-section h-screen w-screen flex justify-center bg-gradient-to-t from-[#0b1b34] to-[#2f3f54] text-white select-none">
 			<div className="noisy" />
 			<img
-				src="/images/about-bg.webp"
+				src="/images/aboutme-bg.webp"
 				alt="Background"
-				className="absolute w-full h-full object-cover object-[0%_90%] opacity-50 z-2"
+				className="absolute inset-0 h-screen w-full object-cover object-top-left md:object-top pointer-events-none select-none opacity-70 z-2"
 			/>
 
 			<img
-				src="/images/about-foreground.webp"
+				src="/images/aboutme-fg.webp"
 				alt="Background"
-				className="absolute foreground w-full h-full object-cover object-[0%_90%] opacity-100 z-4"
+				className="foreground absolute inset-0 h-screen w-full object-cover object-[20%_100%] md:object-bottom pointer-events-none select-none opacity-100 z-3"
 			/>
 
-			<div className="h-screen w-screen py-10 sm:py-20 2xl:py-30 px-10 sm:px-20 2xl:px-40 flex flex-col sm:flex-row justify-between">
-				<div className="w-full h-full flex flex-col justify-between">
-					<div className="text-base sm:text-xl 2xl:text-2xl text-white/90 w-full sm:w-full 2xl:w-10/12 text-justify text-pretty space-y-2 sm:space-y-4 z-5">
+			<div className="container-padding h-screen w-screen flex flex-col xl:flex-row gap-y-6 xl:gap-y-0">
+				<div className="w-full flex flex-col justify-between">
+					<div className="text-base sm:text-xl 2xl:text-2xl text-white/90 w-full text-justify text-pretty space-y-2 sm:space-y-4 z-5">
 						<p className="paragraph">Indonesian software engineer & tech explorer.</p>
 						<p className="paragraph">Thrives in the quiet of the night, weaving thoughts into lines of code.</p>
 						<p className="paragraph">Fueled by auroras, caffeine, and curiosity.</p>
@@ -112,38 +120,38 @@ export default function About() {
 						</p>
 					</div>
 
-					<div className="z-3 mb-20 hidden sm:block">
+					<div className="z-3 mt-auto hidden xl:block">
 						<h1 className="title-about font-extrabold text-4xl sm:text-6xl 2xl:text-7xl text-white/80">The Explorer’s Origin</h1>
 						<hr className="title-about-underline my-2 h-1 w-0 opacity-0 border-0 rounded-r-lg bg-white/80" />
 						<p className="title-about text-xl font-light italic">A quiet mind, a curious soul, and a trail of code behind.</p>
 					</div>
 				</div>
 
-				<div className="grid grid-cols-2 grid-rows-2 gap-x-4 text-center text-white/80 mb-10 sm:mb-50 z-3 w-full sm:w-5/12 2xl:w-4/12">
+				<div className="grid grid-cols-2 grid-rows-2 gap-4 md:gap-10 mx-auto text-center text-white/80 mb-auto mt-10 lg:mt-0 z-3 w-full sm:w-5/12 2xl:w-4/12">
 					<div className="stats">
-						<p className="text-3xl sm:text-4xl font-bold text-white/90">1+</p>
-						<p className="text-sm sm:text-base/1 2xl:text-lg mt-4">Years of Experience</p>
+						<p className="text-xl md:text-4xl font-bold text-white/90">1+</p>
+						<p className="text-sm md:text-base 2xl:text-lg">Years of Experience</p>
 					</div>
 					<div className="stats">
-						<p className="text-3xl sm:text-4xl font-bold text-white/90">10+</p>
-						<p className="text-sm sm:text-base/1 2xl:text-lg mt-4">Projects Built</p>
+						<p className="text-xl md:text-4xl font-bold text-white/90">10+</p>
+						<p className="text-sm md:text-base 2xl:text-lg">Projects Built</p>
 					</div>
 					<div className="stats">
-						<p className="text-3xl sm:text-4xl font-bold text-white/90">4+</p>
-						<p className="text-sm sm:text-base/1 2xl:text-lg mt-2">Production Deployments</p>
+						<p className="text-xl md:text-4xl font-bold text-white/90">4+</p>
+						<p className="text-sm md:text-base 2xl:text-lg">Production Deployments</p>
 					</div>
 					<div className="stats">
-						<p className="text-3xl sm:text-4xl font-bold text-white/90">∞</p>
-						<p className="text-sm sm:text-base/1 2xl:text-lg mt-2">Cups of Coffee Consumed</p>
+						<p className="text-xl md:text-4xl font-bold text-white/90">∞</p>
+						<p className="text-sm md:text-base 2xl:text-lg">Cups of Coffee Consumed</p>
 					</div>
 				</div>
 
-				<div className="z-3 mb-20 sm:hidden block">
+				<div className="z-3 mt-auto block xl:hidden">
 					<h1 className="title-about font-extrabold text-3xl sm:text-6xl 2xl:text-7xl text-white/80">
 						The <br className="block sm:hidden" /> Explorer’s Origin
 					</h1>
 					<hr className="title-about-underline my-2 h-1 w-0 opacity-0 border-0 rounded-e-lg bg-white/80" />
-					<p className="title-about text-base sm:text-xl font-light italic">A quiet mind, a curious soul, and a trail of code behind.</p>
+					<p className="title-about w-full text-sm sm:text-xl font-light italic break-words whitespace-normal">A quiet mind, a curious soul, and a trail of code behind.</p>
 				</div>
 			</div>
 		</section>

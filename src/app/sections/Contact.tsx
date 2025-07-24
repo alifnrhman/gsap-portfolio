@@ -110,17 +110,18 @@ export default function Contact() {
 		<section className="contact-section h-screen w-screen flex justify-center text-white select-none">
 			<div className="noisy" />
 			<video
-				src="/videos/contact-bg.mp4"
-				className="absolute w-full h-full object-cover object-bottom z-2 opacity-80"
+				src="/videos/campfire.mp4"
+				className="absolute inset-0 h-screen w-full object-cover object-[35%_100%] pointer-events-none select-none z-2 opacity-80"
 				autoPlay
 				loop
 				muted
 			/>
+			<div className="absolute top-0 left-0 w-full h-[100px] bg-gradient-to-b from-black to-transparent pointer-events-none z-10" />
 
-			<div className="h-screen w-screen py-30 px-40 flex justify-between">
+			<div className="container-padding h-screen w-screen flex justify-between">
 				<div className="w-full h-full flex flex-col justify-between">
 					<form
-						className="flex flex-col gap-4 z-6 text-lg mx-auto w-1/3 mt-10"
+						className="flex flex-col gap-4 z-6 text-lg mx-auto px-4 w-full md:w-2/3 xl:w-1/3 mt-10"
 						ref={form}
 						onSubmit={sendMessage}>
 						<label htmlFor="name">
@@ -131,7 +132,7 @@ export default function Contact() {
 								id="name"
 								required
 								placeholder="Your name"
-								className="mt-2 px-3 py-1.5 bg-white/10 backdrop-blur-xs border border-white/20 rounded-xl w-full text-white/70 outline-none focus:ring focus:ring-white/30 transition-all duration-300"
+								className="mt-2 px-4 py-2 bg-white/10 backdrop-blur-xs border border-white/20 rounded-xl w-full text-white/70 outline-none focus:ring focus:ring-white/30 transition-all duration-300"
 							/>
 						</label>
 
@@ -143,7 +144,7 @@ export default function Contact() {
 								id="email"
 								required
 								placeholder="Your email"
-								className="mt-2 px-3 py-1.5 bg-white/10 backdrop-blur-xs border border-white/20 rounded-xl w-full text-white/70 outline-none focus:ring focus:ring-white/30 transition-all duration-300"
+								className="mt-2 px-4 py-2 bg-white/10 backdrop-blur-xs border border-white/20 rounded-xl w-full text-white/70 outline-none focus:ring focus:ring-white/30 transition-all duration-300"
 							/>
 						</label>
 
@@ -155,14 +156,15 @@ export default function Contact() {
 								required
 								placeholder="Your message"
 								rows={3}
-								className="mt-2 px-3 py-1.5 bg-white/10 backdrop-blur-xs border border-white/20 rounded-xl w-full text-white/70 outline-none focus:ring focus:ring-white/30 transition-all duration-300"></textarea>
+								className="mt-2 px-4 py-2 bg-white/10 backdrop-blur-xs border border-white/20 rounded-xl w-full text-white/70 outline-none focus:ring focus:ring-white/30 transition-all duration-300"></textarea>
 						</label>
 
 						<button className="px-6 py-3 text-sm md:text-base font-medium text-white/50 hover:text-white/80 italic bg-white/10 backdrop-blur-md border border-white/20 rounded-xl transition-all duration-300 hover:bg-white/20 hover:shadow-md cursor-pointer">
 							Whisper into the fire
 						</button>
 					</form>
-					<div className="z-3 hidden sm:block text-right">
+
+					<div className="z-3 mb-10 md:mb-0 block text-right">
 						<h2 className="title-contact font-extrabold text-4xl sm:text-6xl 2xl:text-7xl text-white/80">Leave a Message by the Fire</h2>
 						<hr className="title-contact-underline ms-auto my-2 h-1 w-0 opacity-0 border-0 rounded-s-lg bg-white/80" />
 						<p className="title-contact text-xl font-light italic">Speak quietly. The forest listens.</p>
